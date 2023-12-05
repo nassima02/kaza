@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 
 function Header() {
     return (
-        <header>
+        <header className="header">
             <img src="/logo.png" alt="logo de l'agence Kaza" />
-            <nav>
+            <nav className="navbar">
                 <ul>
                     <li>
                         <NavLink to="/" exact>

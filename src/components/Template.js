@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 function Template({ children }) {
     return (
-        <div>
+        <div className="template">
             <Header />
             <main>{children}</main>
             <Footer />
