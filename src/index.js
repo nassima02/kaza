@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import routes from './router.config/router' // Assurez-vous que le chemin est correct
+import routes from './router.config/router'
 
 const rootElement = document.getElementById('root')
 
