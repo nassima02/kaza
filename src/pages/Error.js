@@ -1,12 +1,14 @@
 import React from 'react'
-import logo from './404.png'
+import Template from '../components/Template'
 
 function Error() {
     return (
-        <div>
-            <h1>Error</h1>
-            <img src={logo} alt="erreur 404" />
-        </div>
+        <Template>
+            <div>
+                <h1>Error</h1>
+                <img src="/404.png" alt="erreur 404" />
+            </div>
+        </Template>
     )
 }
 

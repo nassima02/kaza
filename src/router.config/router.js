@@ -1,27 +1,51 @@
-import { createBrowserRouter } from 'react-router-dom'
+// import { createBrowserRouter } from 'react-router-dom'
+// import Home from '../pages/Home'
+// import About from '../pages/About'
+// import Error from '../pages/Error'
+// import FicheLogement from '../pages/FicheLogement'
+//
+// const router = createBrowserRouter([
+//     {
+//         path: '/',
+//         element: <Home />,
+//     },
+//     {
+//         path: '/about',
+//         element: <About />,
+//     },
+//     {
+//         path: '/ficheLogement',
+//         element: <FicheLogement />,
+//     },
+//     {
+//         // si l'url ne correspond à rien je me dirige sur la page d'erreur 404}
+//         path: '*',
+//         element: <Error />,
+//     },
+// ])
+// export default router
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Error from '../pages/Error'
 import FicheLogement from '../pages/FicheLogement'
 
-const router = createBrowserRouter([
+const routes = [
     {
         path: '/',
         element: <Home />,
     },
     {
-        path: '/About',
+        path: '/about',
         element: <About />,
     },
-
     {
-        // si l'url ne correspond à rien je me dirige sur la page d'erreur 404}
+        path: '/ficheLogement',
+        element: <FicheLogement />,
+    },
+    {
         path: '*',
         element: <Error />,
     },
-    {
-        path: '/FicheLogement',
-        element: <FicheLogement />,
-    },
-])
-export default router
+]
+
+export default routes

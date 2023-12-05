@@ -1,7 +1,11 @@
 import React from 'react'
-
+import Template from '../components/Template'
 function About() {
-    return <div className="About">About</div>
+    return (
+        <Template>
+            <h2>Ici va être insérer le contenu de la page a propos</h2>
+        </Template>
+    )
 }
 
 export default About
