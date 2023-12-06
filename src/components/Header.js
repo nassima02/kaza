@@ -8,12 +8,25 @@ function Header() {
             <nav className="navbar">
                 <ul>
                     <li className="police">
-                        <NavLink to="/" exact>
+                        <NavLink
+                            to="/"
+                            exact
+                            className={(nav) =>
+                                nav.isActive ? 'nav-active' : ''
+                            }
+                        >
                             Accueil
                         </NavLink>
                     </li>
                     <li className="police">
-                        <NavLink to="/about">À Propos</NavLink>
+                        <NavLink
+                            to="/about"
+                            className={(nav) =>
+                                nav.isActive ? 'nav-active' : ''
+                            }
+                        >
+                            À Propos
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
