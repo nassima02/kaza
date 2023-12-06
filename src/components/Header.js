@@ -7,12 +7,12 @@ function Header() {
             <img src="/logo.png" alt="logo de l'agence Kaza" />
             <nav className="navbar">
                 <ul>
-                    <li>
+                    <li className="police">
                         <NavLink to="/" exact>
                             Accueil
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="police">
                         <NavLink to="/about">À Propos</NavLink>
                     </li>
                 </ul>

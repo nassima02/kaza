@@ -1,0 +1,104 @@
+/************les polices de caractères ***************/
+.police {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.police-card {
+    font-size: 18px;
+}
+.police-banner {
+    font-size: 48px;
+}
+/*************** style de template avec header et footer **********/
+.template {
+    width: 1440px;
+    margin: 0 auto; /*  Pour centrer la page horizontalement */
+    padding: 45px 0 0 0;
+    gap: 50px;
+    background: #ffffff;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 68px;
+    padding: 45px 100px 50px 100px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    height: 209px;
+    background: #000000;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar ul li {
+    text-align: right;
+    padding: 28px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ff6060; /* Couleur du texte */
+}
+/************le style du contenu des pages *****************/
+.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px 50px 100px;
+}
+/*********** style du composant Banner ************/
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 35%; /* Positionne le titre au centre verticalement */
+    left: 50%; /* Positionne le titre au centre horizontalement */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.banner img {
+    width: 1240px;
+    height: 223px;
+    left: 100px;
+    object-fit: cover;
+    border-radius: 25px;
+    filter: brightness(70%);
+}
+
+/****** style de gallery et composant carte *********/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 60px;
+    padding: 56px 50px 50px 56px;
+}
+.card {
+    width: calc(33.33% - 40px);
+    height: 340px;
+    background-image: linear-gradient(to bottom, #f45f5f, #7b3131);
+    text-align: left;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+.card h3 {
+    margin-top: 10px;
+}

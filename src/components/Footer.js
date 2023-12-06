@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer police">
             <div>
                 <img src="/logo-footer.png" alt="logo de l'agence Kaza" />
             </div>
