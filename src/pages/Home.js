@@ -2,17 +2,8 @@ import React from 'react'
 import Template from '../components/Template'
 import Card from '../components/Card'
 import Banner from '../components/Banner'
-
+import logementsData from '../data/logements.json'
 function Home() {
-    const galleryData = [
-        { id: 1, title: 'Carte 1', imageUrl: '/image1.jpg' },
-        { id: 2, title: 'Carte 2', imageUrl: '/image2.jpg' },
-        { id: 3, title: 'Carte 3', imageUrl: '/image3.jpg' },
-        { id: 4, title: 'Carte 4', imageUrl: '/image4.jpg' },
-        { id: 5, title: 'Carte 5', imageUrl: '/image5.jpg' },
-        { id: 6, title: 'Carte 6', imageUrl: '/image6.jpg' },
-    ]
-
     return (
         <Template>
             <div className="home">
@@ -23,12 +14,12 @@ function Home() {
                 />
 
                 <section className="gallery">
-                    {/* Utiliser map pour créer les composants de carte pour chaque élément de galleryData */}
-                    {galleryData.map((card) => (
+                    {/* Utiliser map pour créer les composants de carte pour chaque élément de logementsData */}
+                    {logementsData.map((logement) => (
                         <Card
-                            key={card.id}
-                            title={card.title}
-                            imageUrl={card.imageUrl}
+                            key={logement.id}
+                            title={logement.title}
+                            imageUrl={logement.cover} // Utilisez la propriété cover pour l'image principale
                         />
                     ))}
                 </section>
@@ -36,4 +27,5 @@ function Home() {
         </Template>
     )
 }
+
 export default Home
