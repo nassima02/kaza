@@ -25,8 +25,6 @@
 // ])
 // export default router
 import React from 'react'
-
-//import ReactDOM from 'react-dom';
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Error from '../pages/Error'

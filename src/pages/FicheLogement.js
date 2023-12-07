@@ -1,12 +1,8 @@
 import React from 'react'
-import Template from '../components/Template'
+//import Template from '../components/Template'
 
 function FicheLogement() {
-    return (
-        <Template>
-            <h2>Ici va être insérer les fiches Logements</h2>
-        </Template>
-    )
+    return <h2>Ici va être insérer les fiches Logements</h2>
 }
 
 export default FicheLogement

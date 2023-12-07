@@ -1,7 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 function Header() {
+    let location = useLocation()
+
     return (
         <header className="header">
             <img src="/logo.png" alt="logo de l'agence Kaza" />
@@ -10,9 +12,8 @@ function Header() {
                     <li className="police">
                         <NavLink
                             to="/"
-                            exact
-                            className={(nav) =>
-                                nav.isActive ? 'nav-active' : ''
+                            className={() =>
+                                location.pathname === '/' ? 'nav-active' : ''
                             }
                         >
                             Accueil
@@ -21,8 +22,10 @@ function Header() {
                     <li className="police">
                         <NavLink
                             to="/about"
-                            className={(nav) =>
-                                nav.isActive ? 'nav-active' : ''
+                            className={() =>
+                                location.pathname === '/about'
+                                    ? 'nav-active'
+                                    : ''
                             }
                         >
                             À Propos
