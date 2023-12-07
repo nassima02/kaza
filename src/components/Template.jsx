@@ -1,12 +1,15 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import { Outlet } from 'react-router-dom'
 
-function Template({ children }) {
+function Template() {
     return (
         <div className="template">
             <Header />
-            <main>{children}</main>
+            <main>
+                <Outlet />
+            </main>
             <Footer />
         </div>
     )
