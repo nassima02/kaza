@@ -1,200 +1,233 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-/************les polices de caractères ***************/
-.police {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 500;
-    color: #ffffff;
-}
-.police-card {
-    font-size: 18px;
-}
-.police-banner {
-    font-size: 48px;
-}
-h2 {
-    margin: 0 !important;
-}
-/*************** style de template avec header et footer **********/
-.template {
-    width: 1440px;
-    margin: 0 auto; /*  Pour centrer la page horizontalement */
-    padding: 45px 0 0 0;
-    gap: 50px;
-    background: #ffffff;
-}
-.header {
-    display: flex;
-    justify-content: space-between;
-    width: 1240px;
-    height: 68px;
-    padding: 45px 100px 50px 100px;
-}
-.footer {
-    display: flex;
-    justify-content: center;
-    width: 1440px;
-    height: 209px;
-    background: #000000;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
-.navbar ul {
-    display: flex;
-    padding: 0;
+body {
+    font-family: Montserrat, sans-serif;
     margin: 0;
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    // background-color: black;
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
-
-.navbar ul li {
-    text-align: right;
-    padding: 28px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #ff6060; /* Couleur du texte */
-}
-.nav-active {
-    text-decoration: underline !important;
-}
-/************le style du contenu des pages *****************/
-.home {
+/************ style du contenu des pages *****************/
+.page {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 100px 50px 100px;
+    padding: 0 100px 0 100px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @media (max-width: 600px) {
+        padding: 20px;
+        margin: 0;
+        gap: 20px;
+    }
 }
-/*********** style du composant Banner ************/
-.banner {
-    position: relative;
-    text-align: center;
-}
-
-.banner h1 {
-    width: 1240px;
-    position: absolute;
-    top: 35%; /* Positionne le titre au centre verticalement */
-    left: 50%; /* Positionne le titre au centre horizontalement */
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-.banner img {
-    width: 1240px;
-    height: 223px;
-    left: 100px;
-    object-fit: cover;
-    border-radius: 25px;
-    filter: brightness(70%);
+/******** style de la page a propos ****************/
+.page__about {
+    // la div qui contient l'accordion dans la page a propos
+    margin: 38px 108.5px 18px 108.5px;
+    @media (max-width: 600px) {
+        margin: 0;
+    }
 }
 
-/****** style de gallery et composant carte *********/
-
-.gallery {
+/****** style  de la page d'accueil *********/
+.page__home {
     max-width: 1240px;
     background: #f6f6f6;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px 60px;
     padding: 50px;
     border-radius: 25px;
-    margin-top: 43px;
-}
-.card {
-    height: 340px;
-    background-image: linear-gradient(to bottom, #f45f5f, #7b3131);
-    text-align: left;
-    border-radius: 15px;
-}
-.card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-.card h3 {
-    margin: 20px;
+    margin: 43px 0 43px 0;
+
+    @media (max-width: 600px) {
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+    }
 }
 
 /*************** style de la page d'erreur ****************/
-.police-error {
+
+.error404 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    p {
+        @media (max-width: 600px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.error404__image {
+    margin: 89px 421.5px 0 421.5px;
+    @media (max-width: 600px) {
+        width: 198px;
+        height: 99px;
+        margin: auto;
+        padding: 113px 88.5px;
+    }
+}
+
+.error404__link {
+    padding: 0 578px 139px 578px;
+    @media (max-width: 600px) {
+        padding: 113px 77px 113px 77px;
+    }
+}
+
+/************ les polices de caractères ***************/
+.police {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+}
+.police--accordion {
+    font-size: 18px;
+    @media (max-width: 600px) {
+        font-size: 13px;
+    }
+}
+.police--nav {
+    font-size: 18px;
+    color: #ff6060;
+    margin: auto;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+}
+
+.police__error {
     font-size: 36px;
-    line-height: 51px;
     text-align: left;
     color: #ff6060;
     margin: 139px 284px 139px 284px;
+    @media (max-width: 600px) {
+        margin: 0 57.5px;
+        text-align: center;
+    }
 }
-.img404 {
-    margin: 89px 421.5px 0 421.5px;
-}
-.police-nav {
-    font-size: 18px;
+
+.police__title {
     color: #ff6060;
-}
-.error {
-    padding: 0 578px 139px 578px;
+    font-size: 36px;
+    line-height: 51px;
+    margin: 0;
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
 }
 
-/* Ajoutez les styles appropriés pour l'élément .accordion-arrow */
-.accordion {
-    width: 1023px;
-    margin: 38px 108.5px;
-    border-radius: 5px;
-    background: #ff6060;
+.police__p {
+    color: #ff6060;
+    font-size: 18px;
+    margin: 0;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 }
 
-.accordion-title {
+.tagList {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/**************** style de la page fiche logement ************/
+.fiche-logement {
+    padding: 20px 100px;
+    @media (max-width: 600px) {
+        padding: 7px 20px;
+    }
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+
+    p {
+        white-space: pre-line;
+    }
+
+    img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+
+        @media (max-width: 600px) {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
+.owner-and-stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 121px;
+    gap: 21px;
+    margin-top: 16px;
+    @media (max-width: 600px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 33px;
+        align-items: center;
+    }
+}
+
+.fiche-containt {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 10px 15px;
-}
-
-.arrow {
-    color: white;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-}
-
-.rotate {
-    transition: transform 0.3s ease;
-    transform: rotate(-180deg);
-}
-
-.accordion-content {
-    color: #ff6060;
-    margin: 0;
-    padding: 15px;
-    font-size: 17px;
-    position: relative;
-}
-.accordion-content-wrapper {
-    background-color: #f3efef;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.6s ease-in-out;
-    position: relative;
-}
-
-.accordion-content-wrapper.open-wrapper {
-    max-height: 500px;
-    transition: max-height 0.8s ease-in-out;
-}
-
-.accordion-content.open-text {
-    animation: slideIn 0.6s ease;
-}
-
-@keyframes slideIn {
-    from {
-        top: -50px;
-        opacity: 0;
+    @media (max-width: 600px) {
+        flex-direction: column;
     }
-    to {
-        top: 0;
-        opacity: 1;
+}
+
+.fiche-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star-filled {
+    color: #ff6060;
+}
+
+.star-empty {
+    color: #d4d4d4;
+}
+
+.colaps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 76px;
+    width: 100%;
+    margin-top: 24px;
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }

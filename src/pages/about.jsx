@@ -1,19 +1,17 @@
-//import React, { useState } from 'react'
-//import Template from '../components/Template'
-import Banner from '../components/Banner'
+import Banner from '../components/banner/banner'
 import '../assets/styles.scss' // Import du fichier CSS
-import Accordion from '../components/Accordion'
+import Accordion from '../components/accordion/accordion'
 
 function About() {
     return (
-        <div className="home">
+        <div className="page">
             <Banner
                 title=""
                 src="/bannerApropos.png"
                 alt="Image de bannière représentant une vue sur les montagnes"
             />
 
-            <section>
+            <section className="page__about">
                 <Accordion
                     title="Fiabilité"
                     description="Les annonces postées sur Kasa garantissent une fiabilité
@@ -33,7 +31,7 @@ function About() {
                  entrianera une exclusion de notre plateforme."
                 />
                 <Accordion
-                    title="Securité"
+                    title="Sécurité"
                     description="La sécurité est la priorité de Kasa. Aussi bien
                  pour nos hôtes que pour les voyageur, chaque logement correspond aux critères de sécurité
                  établis par nos services. En laissant une note aussi bien à l'hôte qu'au locatire, cela
@@ -44,5 +42,4 @@ function About() {
         </div>
     )
 }
-
 export default About

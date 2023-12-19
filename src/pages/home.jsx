@@ -1,29 +1,31 @@
 import React from 'react'
-//import Template from '../components/Template'
-import Card from '../components/Card'
-import Banner from '../components/Banner'
-import logementsData from '../data/logements.json'
+import Card from '../components/card/card'
+import Banner from '../components/banner/banner'
+import { useLoaderData } from 'react-router-dom'
+
 function Home() {
+    const { logements } = useLoaderData()
+
     return (
-        <div className="home">
+        <div className="page">
             <Banner
                 title="Chez vous, partout et ailleurs"
                 src="/banner.png"
                 alt="Image de bannière représentant une vue sur les montagnes"
             />
 
-            <section className="gallery">
+            <section className="page__home">
                 {/* Utiliser map pour créer les composants de carte pour chaque élément de logementsData */}
-                {logementsData.map((logement) => (
+                {logements.map((logement) => (
                     <Card
                         key={logement.id}
+                        id={logement.id}
                         title={logement.title}
-                        imageUrl={logement.cover} // Utilisez la propriété cover pour l'image principale
+                        imageUrl={logement.cover} // la propriété cover pour l'image principale
                     />
                 ))}
             </section>
         </div>
     )
 }
-
 export default Home
