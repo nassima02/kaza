@@ -4,6 +4,7 @@ import Accordion from '../../../../features/shared-components/accordion/accordio
 import Tag from '../fiche-logement-components/tag/tag'
 import Owner from '../fiche-logement-components/owner/owner'
 import Stars from '../fiche-logement-components/stars/stars'
+import React from 'react'
 
 function FicheLogement() {
     const { logement } = useLoaderData() // Récupération des données du logement à partir du hook useLoaderData
@@ -45,16 +46,24 @@ function FicheLogement() {
             {/* Sections pour la description et liste des équipements du logement*/}
             <div className="colaps">
                 <div>
-                    <Accordion
-                        title="Description"
-                        description={logement.description}
-                    />
+                    <Accordion title="Description">
+                        <>{logement.description}</>
+                    </Accordion>
                 </div>
                 <div>
-                    <Accordion
-                        title="Equipements"
-                        equipements={logement.equipments}
-                    />
+                    <Accordion title="Equipements">
+                        <>
+                            {logement.equipments ? (
+                                <ul>
+                                    {logement.equipments.map(
+                                        (equipement, index) => (
+                                            <li key={index}>{equipement}</li>
+                                        )
+                                    )}
+                                </ul>
+                            ) : null}
+                        </>
+                    </Accordion>
                 </div>
             </div>
         </div>

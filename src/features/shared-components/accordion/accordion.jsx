@@ -34,17 +34,7 @@ const Accordion = (props) => {
                     isActive ? 'accordion__content__wrapper--open-wrapper ' : ''
                 }`}
             >
-                <div className={contentClassName}>{props.description}</div>
-
-                <div className={contentClassName}>
-                    {props.equipements ? (
-                        <ul>
-                            {props.equipements.map((equipement, index) => (
-                                <li key={index}>{equipement}</li>
-                            ))}
-                        </ul>
-                    ) : null}
-                </div>
+                <div className={contentClassName}>{props.children}</div>
             </div>
         </div>
     )
