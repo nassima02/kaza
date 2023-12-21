@@ -1,4 +1,4 @@
-import logements from '../data/logements.json'
+import logements from '../datas/logements.json'
 import { redirect } from 'react-router-dom'
 
 export async function loadLogements() {
