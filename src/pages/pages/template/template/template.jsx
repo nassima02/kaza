@@ -13,8 +13,8 @@ function Template() {
                     <Outlet />
                     {/* Utilisation du composant Outlet pour rendre les routes enfants. */}
                 </main>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }
