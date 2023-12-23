@@ -51,7 +51,7 @@ function FicheLogement() {
                     </Accordion>
                 </div>
                 <div>
-                    <Accordion title="Equipements">
+                    <Accordion title="Équipements">
                         <>
                             {logement.equipments ? (
                                 <ul>
