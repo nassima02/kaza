@@ -3,7 +3,7 @@
 # Projet 6 : Kasa - OpenClassrooms
 
 
-![booki-ecran](https://github.com/nassima02/Portfolio/blob/main/frontend/public/images/kasa/kaza-ecran.jpg)/
+![booki-ecran](https://github.com/nassima02/Portfolio/blob/main/frontend/public/images/kasa/kaza-ecran.jpg)
 
 
 ## Contexte :
