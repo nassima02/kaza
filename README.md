@@ -17,4 +17,5 @@ Des composants réutilisables doivent être créés pour les onglets ouvrants et
 
 ## Langages utilisés :
 React /Tailwind/Sass
-- Visiter le site web :[ici]https://projetoc.alwaysdata.net/
+- Visiter le site web : [ici](https://projetoc.alwaysdata.net/)
+
